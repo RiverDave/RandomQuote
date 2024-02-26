@@ -1,12 +1,10 @@
-//TODO: Provide:
-//                FOOTER & NAVBAR to PAGE
-//TODO:
 import { Footer } from './Components/Footer.jsx'
 
 import { useState, useEffect } from 'react'
 import { fetchApi } from './api/data'
+import { fetchData } from './api/data'
 import {Quote} from './Components/Quote.jsx'
-
+import { Navbar } from './Components/Navbar.jsx'
 
 import './App.css'
 
@@ -31,23 +29,25 @@ function App() {
     // .catch(err => console.log(err))
     
     //much better syntax:
-    const fetchData = async () => {
-      try {
-        const data = await fetchApi();
-        const quote  = data[0];
-        changeQuote([quote.quote, quote.author])
-      } catch(err) {
-        console.log(err);
-      }
-    };
+    // const fetchData = async () => {
+    //   try {
+    //     const data = await fetchApi();
+    //     const quote  = data[0];
+    //     changeQuote([quote.quote, quote.author])
+    //   } catch(err) {
+    //     console.log(err);
+    //   }
+    // };
 
-    fetchData();
+    fetchData(changeQuote); //callback
 
   }, []) // Never forget about this arr!
 
   return (
     <div className='App'>
-      <Quote currentQuote={currentQuote[0]} quoteAuthor={currentQuote[1]} citeLink={citeLink}/>
+      
+      <Navbar/>
+      <Quote currentQuote={currentQuote[0]} quoteAuthor={currentQuote[1]} citeLink={citeLink} changeFunc={() => fetchData(changeQuote)}/>
       <Footer/>
     </div>
   )

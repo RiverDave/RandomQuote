@@ -21,6 +21,17 @@ export async function fetchApi(){
 }
 
 
+export const fetchData = async (quoteState) => {
+    try {
+      const data = await fetchApi();
+      const quote  = data[0];
+      quoteState([quote.quote, quote.author])
+    } catch(err) {
+      console.log(err);
+    }
+  };
+
+
 
 
 

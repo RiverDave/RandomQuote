@@ -1,7 +1,51 @@
 .footer-content {
-    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+    background-color: rgb(16, 16, 16);
+    color: white;
+    /* border-top: solid;
+    border-color: white; */
 }
 
-.footer-content h1 {
-    color: red;
+/* .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    color: rgba(255, 255, 255, 0.614);
+}
+
+footer ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+}
+
+footer li {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 0 10px;
+    list-style: none;
+}
+
+.github-icon {
+    height: 40px;
+    width: 40px;
+}
+
+.in-icon {
+    height: 40px;
+    width: 40px;
 }
