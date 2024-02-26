@@ -1,5 +1,5 @@
 //TODO: Implement axios to fetch data from the API
-import {API_URL, API_KEY} from './constants.js'
+import {API_URL, API_KEY} from './rconstants.js'
 import axios from 'axios'
 // const axios = require('axios');
 
