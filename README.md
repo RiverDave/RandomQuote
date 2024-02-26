@@ -19,7 +19,7 @@ cd RandomQuote
 npm i
 ```
 
-- Modify src/api/rconstants.js and add your api key
+- Modify src/api/rconstants.js and add your api key. Get it from : https://api-ninjas.com/
 
 ```js
 const API_KEY = `YOUR_API_KEY`;
